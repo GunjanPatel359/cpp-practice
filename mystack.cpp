@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 class MyStack{
@@ -14,7 +13,6 @@ public:
     };
     ~MyStack() {
         delete[] arr;
-        
     }
     bool isFull(){
         if(top+1==size){
@@ -61,6 +59,17 @@ public:
 };
 
 int main() {
-
+    MyStack s1(5);
+    s1.peek();
+    s1.push(4);
+    cout <<s1.peek() <<endl;
+    s1.push(5);
+    s1.push(6);
+    cout <<s1.peek() <<endl;
+    s1.pop();
+    cout <<s1.peek() <<endl;
+    s1.pop();
+    s1.pop();
+    s1.pop();
     return 0;
 }
